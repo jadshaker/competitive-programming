@@ -1,15 +1,14 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
-#include <iostream>
 using namespace std;
 
 int main()
 {
     int max_product = 0, p;
-    vector<vector<int>> v(20, vector<int>(20));
+    int v[20][20];
     for (int i = 0; i < 20; i++)
         for (int j = 0; j < 20; j++)
-            cin >> v[i][j];
+            scanf("%d", &v[i][j]);
 
     for (int i = 0; i < 20; i++)
         for (int j = 0; j < 16; j++)
@@ -39,5 +38,5 @@ int main()
             max_product = max(max_product, p);
         }
 
-    cout << max_product << endl;
+    printf("%d\n", max_product);
 }
