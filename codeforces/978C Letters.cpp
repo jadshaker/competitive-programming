@@ -5,9 +5,8 @@ using namespace std;
 
 int main()
 {
-    lli m, n, t = 1, sum = 0;
+    lli m, n, t = 1, sum = 0, a[n], b[m];
     cin >> n >> m;
-    lli a[n], b[m];
     for (lli i = 0; i < n; i++)
         cin >> a[i + 1];
 
