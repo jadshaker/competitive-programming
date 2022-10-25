@@ -1,21 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long ll;
+
 int main()
 {
-    int n, m;
+    ll n, x;
     cin >> n;
-    vector<bool> b(n);
-    for (int i = 0; i < n - 1; i++)
+    ll s = n;
+    for (int i = 1; i < n; i++)
     {
-        cin >> m;
-        b[m - 1] = true;
+        cin >> x;
+        s += i - x;
     }
-    for (int i = 0; i < n; i++)
-    {
-        if (!b[i]) {
-            cout << i + 1 << '\n';
-            break;
-        }
-    }
+    cout << s << '\n';
 }
